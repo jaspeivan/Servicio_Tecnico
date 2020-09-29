@@ -10,7 +10,7 @@ if (isset($_POST['Registrar'])) {
 	$Telefono=$_POST['Telefono'];
 	$Genero=$_POST['Genero'];
 }
- $ins="INSERT INTO empleado VALUES (Null,'$Nombre','$Apellido','$Cedula','$Telefono','$Direccion','$Genero','$Correo')";
+ $ins="INSERT INTO empleado VALUES (Null,'$Nombre','$Apellido','$Cedula','$Correo','$Direccion','$Telefono','$Genero')";
 
 $ress=mysqli_query($con,$ins);
 

@@ -8,22 +8,25 @@ include ('connect.php');
 	$Fecha=date('d/m/Y');
 	$Descripcion=$_POST['Descripcion'];
 	$Codigo=$_POST['Codigo'];
-	$fechaSalida='2018/10/25';
+	$FechaSalida='20-09-10';
 	$Estatus='Esperando';
-    
+	$id='1';
+
 	include ('validaciones/validarformulario.php');
   
 }
 
-$in="INSERT INTO computadora VALUES ( Null, '$Dep','$tip','1','$tecnico','$id_empleado', '$Fecha', '$Descripcion', '$Codigo','$fechaSalida')" ;
+$in="INSERT INTO computadora VALUES ( Null, '$Dep','$id','$tip','1','$id_empleado','$tecnico', '$Codigo', '$Descripcion', '$Fecha', '$FechaSalida')" ;
 
+
+echo $in;
 $res=mysqli_query($con,$in);
 
 
 if (!$res) {
 	
-	echo ' <script language="javascript">alert("No se pudo Registrar.");</script> ';
-		 echo "<script>location.href='RegistroComputadora.php'</script>";
+	//echo ' <script language="javascript">alert("No se pudo Registrar Intente Nuevamente .");</script> ';
+		// echo "<script>location.href='RegistroComputadora.php'</script>";
 }else{
 	
 	echo ' <script language="javascript">alert("Computadora  Registrada Con Exito!!.");</script> ';
